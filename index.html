@@ -20,14 +20,30 @@
             max-width: 100%;
             max-height: 100%;
         }
+
+        #linkmp3 {
+            display: none !important;
+        }
     </style>
 </head>
 
 <body>
-    <video src="test.mp4" autoplay controls>
+    <audio src="https://minhie1510.github.io/2ndMonthSary/magnetic.mp3" id="linkmp3" class="sembunyi"></audio>
+
+    <video src="test.mp4" autoplay muted controls>
         Your browser does not support the video tag.
     </video>
 
 </body>
+<script>
+    // Lắng nghe sự kiện play trên video
+    const video = document.getElementById('video');
+    const audio = document.getElementById('linkmp3');
+
+    video.addEventListener('play', function () {
+        // Phát nhạc khi video bắt đầu
+        audio.play();
+    });
+</script>
 
 </html>
